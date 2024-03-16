@@ -32,17 +32,19 @@ export class CadastroComponent {
   // montando o objeto de cadastro
   cadastro = new FormGroup({
     nome: new FormControl('',[Validators.required, Validators.minLength(4)]),
-    email: new FormControl('',[Validators.required,Validators.email]),
-    dataNasimento: new FormControl(),
+    email: new FormControl(''),
+    dataNasimento: new FormControl(''),
     senha:new FormControl(''),
-    confirmaSenha:new FormControl('')
+    confirmarSenha:new FormControl('')
 
 
 
   })
 
   salvar(){
-    if(this.cadastro.value.senha === this.cadastro.value.confirmaSenha){
+    if(this.cadastro.value.senha === this.cadastro.value.confirmarSenha &&
+       this.cadastro.value.nome && this.cadastro.value.email && this.cadastro.value.dataNasimento){
+        // verifica se valores nao sao nullos , se todos os campos foram preenchidos
 
       //CRIANDO OBJETO USUARIO
       const usuario = {
@@ -57,6 +59,8 @@ export class CadastroComponent {
       }
       // setando o objeto no localStorage
       localStorage.setItem('usuarioCriado', JSON.stringify(usuario));
+
+      window.location.href = 'http://localhost:4200/login';
 
     }
 
