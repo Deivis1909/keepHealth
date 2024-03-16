@@ -1,0 +1,64 @@
+<div class="cadastro">
+  <form (ngSubmit)="salvar()" [formGroup]="cadastro">
+
+    <div class="elemento-formulario">
+
+
+      <button mat-raised-button color="warn"><label>nome</label></button>
+       <input type="text"
+        name="nome"
+        formControlName="nome">
+
+
+    </div>
+
+    <div class="elemento-formulario">
+      <button mat-raised-button color="warn"><label for="email">email</label></button>
+      <input type="text"
+      name="email"
+      formControlName="email"
+      >
+
+    </div>
+
+    <div class="elemento-formulario">
+
+      <button mat-raised-button color="warn"><label>dataNascimento</label></button>
+      <input name="dataNascimento"
+      formControlName="dataNasimento"
+      >
+
+    </div>
+
+    <div class="elemento-formulario">
+      <button mat-raised-button color="warn"><label>senha</label></button>
+      <input
+        type="password"
+        name="senha"
+        formControlName="senha"
+        >
+
+    </div>
+
+    <div class="elemento-formulario">
+      <button mat-raised-button color="warn"><label>confirma senha</label></button>
+      <input
+        type="password"
+        name="confirmarSenha"
+        formControlName="confirmarSenha"
+        >
+
+    </div>
+    <div class="botoes-formulario">
+      <button mat-raised-button color="accent" type="submit">Cadastrar</button>
+    </div>
+
+
+
+
+
+
+
+
+  </form>
+</div>

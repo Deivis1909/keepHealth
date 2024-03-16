@@ -1,0 +1,34 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label for="email">email </label>
+  <input id="email" type="text" formControlName="email" required>
+
+  <label for="senha">senha: </label>
+  <input id="senha" type="password" formControlName="senha">
+
+
+
+
+
+
+
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+
+<hr>
+
+<p>Form Value: {{ profileForm.value | json }}</p>
+
+<p>Form Status: {{ profileForm.status }}</p>
+
+
+
+
+<div class="example-button-row">
+
+  <button mat-raised-button color="accent">Entrar</button>
+  <button mat-raised-button color="warn">Esqueci a senha</button>
+
+  <a mat-raised-button color="primary" href="https://www.google.com/" target="_blank">Cadastrar</a>
+</div>
+
+<button type="button" (click)="updateProfile()">Update Profile</button>
