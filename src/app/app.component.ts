@@ -4,11 +4,12 @@ import { NgIf } from '@angular/common';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button'
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,MatButtonModule],
+  imports: [RouterOutlet,MatButtonModule,MatSidenavModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
