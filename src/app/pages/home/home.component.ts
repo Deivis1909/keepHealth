@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
+import { FoodItem } from '../../model/foodItem';
+import { DietService } from '../../service/diet.service';
+import { OnReadOpts } from 'net';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +14,17 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  foodList: FoodItem[] = [];
+
+  constructor(private dietService: DietService) { }
+
+  ngOnInit(): void {
+    this.foodList = this.dietService.getFoodList();
+  }
+
+  addFoodItem(): void {
+    this.dietService.addFoodItem(this.foodList);
+  }
 
 }

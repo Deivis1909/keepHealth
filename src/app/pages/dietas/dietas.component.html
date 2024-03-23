@@ -1,5 +1,18 @@
 
-<div class="conteudo">
-  <p>dietas works!</p>
 
+<!-- dietas.component.html -->
+
+<div class="container">
+  <h2>Lista de Alimentos</h2>
+  <button (click)="addFoodItem()">Adicionar Alimento</button>
+  <div class="food-cards">
+    <div class="food-card" *ngFor="let foodItem of foodList">
+      <h3>{{ foodItem.name }}</h3>
+      <p>{{ foodItem.description }}</p>
+      <p>Calorias: {{ foodItem.qttCalories }}</p>
+      <p>Dias de Alimentação: {{ foodItem.qttDaysFeed }}</p>
+      <img *ngIf="foodItem.imageLink" [src]="foodItem.imageLink" alt="{{ foodItem.name }}">
+    </div>
+  </div>
 </div>
+

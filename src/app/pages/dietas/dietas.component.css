@@ -1,4 +1,65 @@
-.conteudo{
-  margin-left: 400px;
+.container {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 300px;
+  margin-right:100px;
+  background-color: #fff3db; /* Amarelo fraco */
 
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombreamento mais intenso */
+}
+
+.food-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.food-card {
+  border: 1px solid #e6ccff; /* Tons de lilás */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombreamento mais intenso */
+  transition: all 0.3s ease; /* Transição suave */
+}
+
+.food-card:hover {
+  background-color: #e6ccff; /* Cor de fundo ao passar o mouse */
+}
+
+.food-card:hover h3 {
+  color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+.food-card:hover p {
+  color: #333; /* Cor do texto ao passar o mouse */
+}
+
+.food-card h3 {
+  margin-top: 0;
+  transition: color 0.3s ease; /* Transição suave */
+}
+
+.food-card p {
+  transition: color 0.3s ease; /* Transição suave */
+}
+
+.food-card img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+h2,button{
+  background-color:darkslategray;
+  color:rgb(200, 200, 14);
+  padding:18px;
+  border: 1px solid #e6ccff; /* Tons de lilás */
+  border-radius: 10px;
+
+}
+button:hover{
+  background-color:  rgb(200, 200, 14);
+  color:darkslategray;
 }
