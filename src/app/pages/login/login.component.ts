@@ -48,7 +48,7 @@ export class LoginComponent {
     const usuarioSalvo = this.dataService.getUsuarioSalvo();
 
     if (usuarioSalvo && usuarioSalvo.senhaUsuario === senha && usuarioSalvo.emailUsuario === email) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/home/inicial']);
     } else {
       this.errorMessage = 'Nome ou email incorretos. Por favor, tente novamente.';
     }
