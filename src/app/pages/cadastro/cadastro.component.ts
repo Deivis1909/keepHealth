@@ -28,6 +28,7 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
   styleUrl: './cadastro.component.css'
 })
 export class CadastroComponent {
+  static proximoId: number = 1;
 
   // montando o objeto de cadastro
   cadastro = new FormGroup({
@@ -35,11 +36,18 @@ export class CadastroComponent {
     email: new FormControl(''),
     dataNasimento: new FormControl(''),
     senha:new FormControl(''),
-    confirmarSenha:new FormControl('')
+    confirmarSenha:new FormControl(''),
+    peso:new FormControl(''),
+    altura:new FormControl(''),
+    cep:new FormControl('')
 
 
 
   })
+
+  //nome, email,
+  // peso, altura, código do usuário, idade e localização (apenas no campo “localização” iremos apresentar um input, que o usuário irá informar o seu CEP, e ao lado um botão escrito ‘Pesquisar’).
+
 
   salvar(){
     if(this.cadastro.value.senha === this.cadastro.value.confirmarSenha &&
@@ -48,10 +56,14 @@ export class CadastroComponent {
 
       //CRIANDO OBJETO USUARIO
       const usuario = {
+        id: CadastroComponent.proximoId++, // Incrementa o ID estático
         nomeUsuario:this.cadastro.value.nome,
         emailUsuario:this.cadastro.value.email,
         dataNascimentoUsuario:this.cadastro.value.dataNasimento,
-        senhaUsuario:this.cadastro.value.senha
+        senhaUsuario:this.cadastro.value.senha,
+        pesoUsuario:this.cadastro.value.peso,
+        alturaUsuario:this.cadastro.value.altura,
+        cepUsuario:this.cadastro.value.cep
 
 
 

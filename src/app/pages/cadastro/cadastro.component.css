@@ -1,8 +1,8 @@
 .cadastro {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+  margin-left: 300px;
+  width: 500px;
 }
 
 .cadastro form {
@@ -45,4 +45,10 @@
 
 .cadastro form .botoes-formulario .entrar {
   background-color: lightblue;
+}
+button{
+  padding:10px;
+}
+input{
+  padding:5px;
 }

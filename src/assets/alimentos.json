@@ -1,0 +1,21 @@
+[
+    {
+       "id": 1,
+       "name": "Abacate",
+       "description": "...",
+       "qttCalories": 0,
+       "qttDaysFeed": 3,
+       "imageLink": ""
+     },{
+      "id": 2,
+       "name": "maça",
+       "description": "...",
+       "qttCalories": 0,
+       "qttDaysFeed": 4,
+       "imageLink": ""
+
+
+
+     }
+
+]

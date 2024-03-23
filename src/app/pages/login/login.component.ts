@@ -41,7 +41,7 @@ export class LoginComponent {
 
 
 
-  constructor(private router:Router,private cadastro:CadastroComponent) {}
+  constructor() {}
 
   login(): void {
 
