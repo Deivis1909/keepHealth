@@ -1,64 +1,56 @@
 import { Component } from '@angular/core';
 
-import { Router } from '@angular/router';
+import { FormControl, FormGroup, ReactiveFormsModule,Validators,FormsModule, FormBuilder } from '@angular/forms';
 
-
-
-
-import { FormsModule } from '@angular/forms';
-
-import { FormArray } from '@angular/forms';
-
-import {MatDividerModule} from '@angular/material/divider';
-
-import { CadastroComponent } from '../cadastro/cadastro.component';
-import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef, OnDestroy} from '@angular/core';
 import {MatListModule} from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { CommonModule } from '@angular/common';
+
+
+
+
+import { Router } from '@angular/router';
+import { DataService } from '../../data/data-service.service';
 
 
 @Component({
-  selector: 'app-login',
   standalone: true,
-  imports: [FormsModule,MatButtonModule,MatDividerModule,MatIconModule,MatToolbarModule,  MatIconModule, MatSidenavModule, MatListModule],
+  imports: [
+    FormsModule,
+    ReactiveFormsModule,CommonModule
+    ],
+  selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  loginForm: FormGroup;
+  errorMessage: string ='';
 
-
-  //  email:String='';
-   // senha:String='';
-   // error: string = '';
-
-
-
-
-
-
-
-  constructor() {}
-
-  login(): void {
-
-   // const loggedIn = this.cadastro.salvar//(this.email,this.senha);
-   // if (!loggedIn) {
-      //this.error = 'Usuário ou senha inválidos';
-    //} else {
-      // Redirecionar para a página de perfil ou outra página após o login bem-sucedido
-   // }
-
-   }
-
-
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private dataService: DataService
+  ) {
+    this.loginForm = this.formBuilder.group({
+      senha: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]]
+    });
   }
 
+  onSubmit(): void {
+    const senha = this.loginForm.get('senha')?.value;
+    const email = this.loginForm.get('email')?.value;
 
+    const usuarioSalvo = this.dataService.getUsuarioSalvo();
 
-
-
-
+    if (usuarioSalvo && usuarioSalvo.senhaUsuario === senha && usuarioSalvo.emailUsuario === email) {
+      this.router.navigate(['/home']);
+    } else {
+      this.errorMessage = 'Nome ou email incorretos. Por favor, tente novamente.';
+    }
+  }
+}
