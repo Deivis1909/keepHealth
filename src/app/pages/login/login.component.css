@@ -1,43 +1,37 @@
-form {
-  padding-top: 1rem;
+.login-container {
+  background-color: #ffffcc; /* Amarelo claro */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreamento */
+  margin:30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
 }
 
 label {
-  display: block;
-  margin: .5em 0;
   font-weight: bold;
-}
-section {
-  display: table;
+  color: #666666; /* Cinza escuro */
 }
 
-.example-label {
-  display: table-cell;
-  font-size: 14px;
-  margin-left: 8px;
-  min-width: 120px;
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc; /* Cinza claro */
+  border-radius: 5px; /* Bordas arredondadas */
 }
 
-.example-button-row {
-  display: table-cell;
-  max-width: 600px;
+button[type="submit"] {
+  background-color: #ffcc00; /* Amarelo */
+  color: #ffffff; /* Branco */
+  border: none;
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-.example-button-row .mat-mdc-button-base {
-  margin: 8px 8px 8px 0;
-}
-
-.container {
-margin: 80px;
-}
-
-.example-button-container {
-  display: flex;
-  justify-content: center;
-  width: 120px;
-}
-
-button{
-padding:20px;
-margin:10px;
+button[type="submit"]:hover {
+  background-color: #ffdb4d; /* Amarelo mais claro ao passar o mouse */
 }

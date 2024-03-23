@@ -1,9 +1,8 @@
-< class="login-container">
-  <h2>Login</h2>
+<div class="login-container"><h2>Login</h2>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="nome">senha</label>
-      <input type="text" formControlName="senha" id="senha">
+      <input type="password" formControlName="senha" id="senha">
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
@@ -15,3 +14,4 @@
   <div *ngIf="errorMessage"></div>
   <ng-template #thenBlock>{{ errorMessage }}</ng-template>
   <ng-template #elseBlock>login feito com sucesso</ng-template>
+</div>
