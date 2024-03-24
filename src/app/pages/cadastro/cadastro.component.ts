@@ -10,6 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 
 
@@ -45,8 +46,9 @@ export class CadastroComponent {
 
   })
 
-  //nome, email,
-  // peso, altura, código do usuário, idade e localização (apenas no campo “localização” iremos apresentar um input, que o usuário irá informar o seu CEP, e ao lado um botão escrito ‘Pesquisar’).
+ constructor(private router:Router){
+
+ }
 
 
   salvar(){
@@ -72,7 +74,7 @@ export class CadastroComponent {
       // setando o objeto no localStorage
       localStorage.setItem('usuarioCriado', JSON.stringify(usuario));
 
-      window.location.href = 'http://localhost:4200/login';
+      this.router.navigate(['/login']);
 
     }
 
