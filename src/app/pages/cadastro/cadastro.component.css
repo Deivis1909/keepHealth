@@ -1,54 +1,82 @@
-.cadastro {
-  display: flex;
-  justify-content: center;
-  margin-left: 300px;
-  width: 500px;
+
+
+.card {
+
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Sombreamento */
+  overflow: hidden;
 }
 
-.cadastro form {
-  border: 1px solid;
-  border-radius: 6px;
-  margin: 10%;
-  padding: 22px 32px;
-  box-shadow: 7px 10px 18px -7px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 7px 10px 18px -7px rgba(0,0,0,0.75);
-  -moz-box-shadow: 7px 10px 18px -7px rgba(0,0,0,0.75);
+.card-header {
+  position: relative;
+
+  padding: 20px;
+  background-color: #8d6ab07f; /* Amarelo */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-position: center;
+  color: #fff;
+  font-family: 'Arial Black', sans-serif; /* Fonte estilizada */
+  height: 100%;
+
 }
 
-.cadastro form .elemento-formulario {
-  display: flex;
-  flex-direction: column;
+
+
+.form-group {
+  margin-bottom: 20px;
 }
 
-.cadastro form .elemento-formulario + .elemento-formulario {
-  margin-top: 8px;
-}
-
-.cadastro form .botoes-formulario {
-  margin-top: 16px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.cadastro form .botoes-formulario button {
-  height: 24px;
-  width: 72px;
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #8d6ab07f; /* Amarelo */
+  transition: color 0.3s ease; /* Transição de cor */
   cursor: pointer;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 4px;
-}
-
-.cadastro form .botoes-formulario button:hover {
-  scale: 1.1;
-}
-
-.cadastro form .botoes-formulario .entrar {
-  background-color: lightblue;
-}
-button{
-  padding:10px;
-}
-input{
+  background-color: #ecda8f;
   padding:5px;
+  border-radius: 16px;
+}
+
+.form-group label:hover {
+  color: #ffdb4d; /* Amarelo mais claro */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffcc00; /* Amarelo */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transição de cor */
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #ffdb4d; /* Amarelo mais claro */
+}
+.card-body {
+  display: flex; /* Alinhar itens em uma linha */
+  align-items: center; /* Centralizar verticalmente */
+  padding: 10px;
+  background-color: #e6e6fa; /* Lilás */
+  width: 200px;
+  height:200px;
 }

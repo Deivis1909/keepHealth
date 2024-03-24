@@ -14,10 +14,11 @@ export const routes: Routes = [
   {path:"home",component:HomeComponent,children:[
     {path:"diet",component:DietasComponent},
     {path:"perfil",component:ProfileComponent},
-    {path:"datails",component:DietDetailComponent},
+
     {path:"inicial",component:InicioComponent}
 
   ]},
-  {path:"cadastro",component:CadastroComponent}
+  {path:"cadastro",component:CadastroComponent},
+  { path: 'detalhes/:id', component: DietDetailComponent }
 
 ];

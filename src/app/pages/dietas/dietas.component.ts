@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DietService } from '../../service/diet.service';
 import { FoodItem } from '../../model/foodItem';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dietas',
@@ -62,7 +63,7 @@ export class DietasComponent implements OnInit {
 ];
 
 
-  constructor(private dietService: DietService) { }
+  constructor(private dietService: DietService,private router:Router) { }
 
   ngOnInit(): void {
 
@@ -72,6 +73,10 @@ export class DietasComponent implements OnInit {
   addFoodItem(): void {
     this.dietService.addFoodItem(this.foodList);
   }
+  showFoodDetails(foodItemId: number): void {
+    this.router.navigate(['/detalhes', foodItemId]);
+  }
 }
+
 
 

@@ -1,10 +1,14 @@
-<div class="cadastro">
+<div class="card-body">
+  <img src="https://www.paho.org/sites/default/files/alimentacao-saudavel-diversificada.jpg" alt="Imagem" />
+  </div>
+<div class="card"><div class="card-header">
   <form (ngSubmit)="salvar()" [formGroup]="cadastro">
 
-    <div class="elemento-formulario">
+    <div class="form-group">
 
 
-      <button mat-raised-button color="warn"><label>nome</label></button>
+      <label for="nome">Nome</label>
+
        <input type="text"
         name="nome"
         formControlName="nome">
@@ -12,8 +16,8 @@
 
     </div>
 
-    <div class="elemento-formulario">
-      <button mat-raised-button color="warn"><label>email</label></button>
+    <div class="form-group">
+      <label for="email">email</label>
       <input type="text"
       name="email"
       formControlName="email"
@@ -21,17 +25,17 @@
 
     </div>
 
-    <div class="elemento-formulario">
+    <div class="form-group">
 
-      <button mat-raised-button color="warn"><label>dataNascimento</label></button>
-      <input name="dataNascimento"
+      <label for="nome">Data de Nascimento</label>
+      <input type="text" name="dataNascimento"
       formControlName="dataNasimento"
       >
 
     </div>
 
-    <div class="elemento-formulario">
-      <button mat-raised-button color="warn"><label>senha</label></button>
+    <div class="form-group">
+      <label for="senha">senha</label>
       <input
         type="password"
         name="senha"
@@ -40,8 +44,8 @@
 
     </div>
 
-    <div class="elemento-formulario">
-      <button mat-raised-button color="warn"><label>confirma senha</label></button>
+    <div class="form-group">
+      <label for="conrfirmarSenha">Confirmar a senha </label>
       <input
         type="password"
         name="confirmarSenha"
@@ -50,36 +54,29 @@
 
     </div>
 
-    <div class="elemento-formulario">
-    <button mat-raised-button color="warn">peso</button>
+    <div class="form-group">
+      <label for="peso">Peso</label>
     <input type="number" name="peso" formControlName="peso">
     </div>
 
-    <div class="elemento-formulario">
-     <button mat-raised-button color="warn">altura</button>
+    <div class="form-group">
+      <label for="altura">Altura</label>
      <input type="number" name="altura" formControlName="altura">
 
     </div>
 
 
-    <div class="elemento-formulario">
-      <button mat-raised-button color="warn">cep</button>
+    <div class="form-group">
+      <label for="cep">cep</label>
       <input type="number" name="cep" formControlName="cep">
 
      </div>
 
 
 
-    <div class="botoes-formulario">
+    <div class="form-group">
       <button mat-raised-button color="accent" type="submit">Cadastrar</button>
     </div>
-
-
-
-
-
-
-
-
   </form>
-</div>
+</div></div>
+

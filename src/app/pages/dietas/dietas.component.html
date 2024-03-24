@@ -11,7 +11,7 @@
       <p>{{ foodItem.description }}</p>
       <p>Calorias: {{ foodItem.qttCalories }}</p>
       <p>Dias de Alimentação: {{ foodItem.qttDaysFeed }}</p>
-      <img *ngIf="foodItem.imageLink" [src]="foodItem.imageLink" alt="{{ foodItem.name }}">
+      <img *ngIf="foodItem.imageLink" [src]="foodItem.imageLink" alt="{{ foodItem.name }}"><button (click)="showFoodDetails(foodItem.id)">Ver Detalhes</button>
     </div>
   </div>
 </div>
