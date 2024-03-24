@@ -3,7 +3,7 @@
 .card {
 
   position: absolute;
-    top: 50%;
+    top: 74%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 400px;
@@ -24,6 +24,7 @@
   color: #fff;
   font-family: 'Arial Black', sans-serif; /* Fonte estilizada */
   height: 100%;
+
 
 }
 
