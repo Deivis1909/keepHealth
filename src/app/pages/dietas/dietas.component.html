@@ -4,14 +4,15 @@
 
 <div class="container">
   <h2>Lista de Alimentos</h2>
-  <button >Adicionar Alimento</button>
+
   <div class="food-cards">
     <div class="food-card" *ngFor="let foodItem of foodList">
+      <button (click)="showDetails(foodItem)">Detalhes</button>
       <h3>{{ foodItem.name }}</h3>
       <p>{{ foodItem.description }}</p>
       <p>Calorias: {{ foodItem.qttCalories }}</p>
       <p>Dias de Alimentação: {{ foodItem.qttDaysFeed }}</p>
-      <img *ngIf="foodItem.imageLink" [src]="foodItem.imageLink" alt="{{ foodItem.name }}"><button (click)="showFoodDetails(foodItem.id)">Ver Detalhes</button>
+      <img *ngIf="foodItem.imageLink" [src]="foodItem.imageLink" alt="{{ foodItem.name }}">
     </div>
   </div>
 </div>

@@ -1,7 +1,9 @@
 
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { DietService } from '../../service/diet.service';
+import { FoodItem } from '../../model/foodItem';
 
 @Component({
   selector: 'app-food-details',
@@ -11,18 +13,18 @@ import { Router } from '@angular/router';
   styleUrl: './food-details.component.css'
 })
 export class FoodDetailsComponent implements OnInit {
-  foodItem: any;
+  foodItem: FoodItem | undefined; // Definindo como opcional
 
-  constructor(private router:Router){
 
-  }
+  constructor(private route: ActivatedRoute, private dietService: DietService) { }
 
-  ngOnInit(): void{
-    const navigation = this.router.getCurrentNavigation();
-    if (navigation && navigation.extras.state) {
-      this.foodItem = navigation.extras.state['foodItem']; // Modificação aqui
-    } else {
-      // Lidar com o caso em que não há dados de item de comida disponíveis
+  ngOnInit(): void {
+    const foodItemId = this.route.snapshot?.paramMap.get('id');
+    if (foodItemId !== null && foodItemId !== undefined) {
+      const parsedFoodItemId = +foodItemId;
+      if (!isNaN(parsedFoodItemId)) {
+        this.foodItem = this.dietService.getFoodItemById(parsedFoodItemId);
+      }
     }
   }
 }

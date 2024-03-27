@@ -84,6 +84,9 @@ addFoodItem(foodList: FoodItem[]): void {
 }
 
 
+getFoodItemById(foodItemId: number): FoodItem | undefined {
+  return this.foodList.find(item => item.id === foodItemId);
+}
 
 
   // Se não houver lista de alimentos no localStorage, inicializa com os dados iniciais

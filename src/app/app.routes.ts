@@ -19,6 +19,6 @@ export const routes: Routes = [
 
   ]},
   {path:"cadastro",component:CadastroComponent},
-  { path: 'detalhes/:id', component: DietDetailComponent }
+  { path: 'food-details/:id', component: DietDetailComponent }
 
 ];

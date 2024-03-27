@@ -26,8 +26,8 @@ export class DietasComponent implements OnInit {
   }
 
 
-  showFoodDetails(foodItemId: number): void {
-    this.router.navigate(['/detalhes', foodItemId]);
+  showDetails(food: FoodItem): void {
+    this.router.navigate(['/food-details', food.id]);
   }
 }
 
