@@ -1,11 +1,13 @@
+
 import { Component, OnInit } from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
+
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 import { FoodItem } from '../../model/foodItem';
 import { DietService } from '../../service/diet.service';
 import { OnReadOpts } from 'net';
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
   selector: 'app-home',
