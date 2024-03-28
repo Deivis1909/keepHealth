@@ -56,7 +56,8 @@ export class CadastroComponent {
        this.cadastro.value.nome && this.cadastro.value.email && this.cadastro.value.dataNasimento){
         // verifica se valores nao sao nullos , se todos os campos foram preenchidos
 
-      //CRIANDO OBJETO USUARIO
+      //CRIANDO OBJETO USUARIO e POPULANDO ELE
+      //COM DADOS VINDOS DO .CADASTRO.VALUE -> FORMSGROUP -> DO TEMPLATE FORMULARIO
       const usuario = {
         id: CadastroComponent.proximoId++, // Incrementa o ID estático
         nomeUsuario:this.cadastro.value.nome,
@@ -71,7 +72,7 @@ export class CadastroComponent {
 
 
       }
-      // setando o objeto no localStorage
+      // setando o objeto USUARIO QUE VEIO DO FORMSGROUP no localStorage
       localStorage.setItem('usuarioCriado', JSON.stringify(usuario));
 
       this.router.navigate(['/login']);

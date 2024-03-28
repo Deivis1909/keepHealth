@@ -1,5 +1,7 @@
-
-<div class="conteudo">
-
-  <p>diet-detail works!</p>
+<div *ngIf="foodItem">
+  <h2>{{ foodItem.name }}</h2>
+  <p>{{ foodItem.description }}</p>
+  <p>Calorias: {{ foodItem.qttCalories }}</p>
+  <p>Dias de Alimentação: {{ foodItem.qttDaysFeed }}</p>
+  <img [src]="foodItem.imageLink" alt="{{ foodItem.name }}">
 </div>
