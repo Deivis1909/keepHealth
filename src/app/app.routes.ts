@@ -15,10 +15,12 @@ export const routes: Routes = [
     {path:"diet",component:DietasComponent},
     {path:"perfil",component:ProfileComponent},
 
-    {path:"inicial",component:InicioComponent}
+    {path:"inicial",component:InicioComponent},
+
 
   ]},
   {path:"cadastro",component:CadastroComponent},
-  { path: 'food-details/:id', component: DietDetailComponent }
+  { path: 'food-details/:id', component: DietDetailComponent },
+
 
 ];

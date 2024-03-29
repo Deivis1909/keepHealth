@@ -1,4 +1,46 @@
-.conteudo{
-  margin-left: 400px;
+.profile-container {
+  background-color: #8c6da9; /* Cor lilás de fundo */
+  padding: 20px;
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombreamento forte */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte bonita */
+  display:flex;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  color: burlywood; /* Amarelo */
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 90%;
+  height:40%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  margin:15px;
+}
+
+input[type="text"]:disabled,
+input[type="email"]:disabled {
+  background-color: #f2f2f2;
+  cursor: not-allowed;
+}
+h2{
+  color:burlywood;
+  background-color: rgb(57, 60, 60);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombreamento forte */
+  border-radius:6px;
+  padding:10px;
+  margin:10px;
+  height: 20px;
 
 }

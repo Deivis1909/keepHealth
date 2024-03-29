@@ -1,4 +1,25 @@
-.conteudo{
-  margin-left: 400px;
+.item-container {
+  border: 2px solid #8A2BE2; /* Borda do conteúdo */
+  border-radius: 10px; /* Cantos arredondados */
+  padding: 20px; /* Espaçamento interno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombreamento forte */
+  background-color: #D8BFD8; /* Cor lilás fraca de fundo */
+  margin-bottom: 20px; /* Margem inferior */
+}
 
+.item-container h2 {
+  color: #8A2BE2; /* Cor lilás para o título */
+}
+.item-container p{
+color:#8A2BE2;
+background-color: burlywood;
+border-radius: 7px;
+padding:10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombreamento forte */
+}
+.item-container img {
+  width: 90%; /* Largura de 100% do container */
+  height: 400px; /* Altura fixa de 400 pixels */
+  object-fit: cover; /* Redimensionar a imagem mantendo a proporção e preenchendo a área */
+  border-radius: 10px; /* Cantos arredondados */
 }
