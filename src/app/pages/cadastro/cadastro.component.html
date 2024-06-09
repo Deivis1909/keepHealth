@@ -1,7 +1,8 @@
 <div class="card-body">
   <img src="https://www.paho.org/sites/default/files/alimentacao-saudavel-diversificada.jpg" alt="Imagem" />
   </div>
-<div class="card"><div class="card-header">
+<div class="card">
+  <div class="card-header">
   <form (ngSubmit)="salvar()" [formGroup]="cadastro">
 
     <div class="form-group">
@@ -27,7 +28,7 @@
 
     <div class="form-group">
 
-      <label for="nome">Data de Nascimento</label>
+      <label for="dataNascimento">Data de Nascimento</label>
       <input type="text" name="dataNascimento"
       formControlName="dataNascimento"
       >

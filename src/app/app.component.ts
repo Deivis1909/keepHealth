@@ -7,6 +7,7 @@ import {MatButtonModule} from '@angular/material/button'
 import {MatSidenavModule} from '@angular/material/sidenav';
 
 import {ToastrModule} from 'ngx-toastr';
+import { provideToastr } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',

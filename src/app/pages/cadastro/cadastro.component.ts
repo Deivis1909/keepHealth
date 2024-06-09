@@ -58,8 +58,9 @@ export class CadastroComponent {
 
             if (this.cadastro.valid) {
             const usuario = {
+         
               id: CadastroComponent.proximoId++,
-              nomeUsuario: this.cadastro.value.nome,
+                                                                            nomeUsuario: this.cadastro.value.nome,
               emailUsuario: this.cadastro.value.email,
               dataNascimentoUsuario: this.cadastro.value.dataNascimento,
               senhaUsuario: this.cadastro.value.senha,
